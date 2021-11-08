@@ -28,3 +28,4 @@ __pycache__
 .pydevproject
 .settings
 .tox
+yarn-error.log
