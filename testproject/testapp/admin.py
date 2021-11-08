@@ -13,10 +13,17 @@ class ItemForm(forms.ModelForm):
         model = Item
         widgets = {
             'code_css': CodeMirrorWidget(
-                attrs={'rows': 4, 'cols': 12},
-                conf='',
+                code_language='css',
             ),
-            'code_js': CodeMirrorWidget,
+            'code_js': CodeMirrorWidget(
+                code_language='js',
+            ),
+            'code_json': CodeMirrorWidget(
+                code_language='json',
+            ),
+            'code_html': CodeMirrorWidget(
+
+            ),
         }
 
 

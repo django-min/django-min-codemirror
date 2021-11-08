@@ -17,7 +17,8 @@ class CodeMirrorWidget(forms.Textarea):
             'min_codemirror/widget.js',
         ]
 
-    def __init__(self, attrs=None, conf=None):
+    def __init__(self, code_language='html', attrs=None):
+        self.code_language = code_language
         super().__init__(attrs)
 
     def get_context(self, *args, **kwargs):
@@ -31,5 +32,7 @@ class CodeMirrorWidget(forms.Textarea):
         return mark_safe(' '.join(classes))
 
     def get_data_attrs(self):
-        data = []
+        data = [
+            'data-code_language="{}"'.format(self.code_language)
+        ]
         return mark_safe(' '.join(data))

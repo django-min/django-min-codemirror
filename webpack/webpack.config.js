@@ -3,7 +3,7 @@ const CopyPlugin = require("copy-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 const project_dst = path.resolve(__dirname, "../min_codemirror/static/min_codemirror/")
-const project_src = path.resolve(__dirname, "../min_codemirror/static_src/")
+const project_src = path.resolve(__dirname, "../static_src/")
 const project_copy = []
 
 
